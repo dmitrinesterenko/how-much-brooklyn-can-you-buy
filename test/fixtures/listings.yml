@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  realty_id: 
+  thumb: MyString
+  url: MyString
+  geo: 
+  address: MyString
+  locality: MyString
+  price: 
+
+two:
+  realty_id: 
+  thumb: MyString
+  url: MyString
+  geo: 
+  address: MyString
+  locality: MyString
+  price: 

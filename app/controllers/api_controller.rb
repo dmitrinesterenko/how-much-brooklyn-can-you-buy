@@ -10,8 +10,7 @@ class ApiController < ActionController::API
   def ihave
     money = params[:money].to_i
     nabe = params[:nabes]
-    #nabe = 'Williamsburg'
-    #nabe = nil
+
     if nabe != nil && nabe != ''
       listings = Listing.find_by(neighborhood: nabe)
     else
@@ -34,7 +33,7 @@ class ApiController < ActionController::API
   end
 
   def neighborhoods
-    nabes = Listing.select(:neighborhood).uniq
+    nabes = Listing.neighborhoods
     render :json => nabes
   end
 end

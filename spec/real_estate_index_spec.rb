@@ -8,23 +8,18 @@ describe RealEstateSpider do
    ## pp @spider
   end
 
-  it "Can retrieve existing records before save" do
+  it "No existing records before save" do
     listings = Listing.all
-    puts 'All listings before parse'
-    pp listings
-    expect(listings.count > 0)
+    expect(listings).to be(nil)
     listings = Listing.find_by(neighborhood: "Cobble Hill")
-    puts 'Cobble Hill'
-    pp listings
-    expect(listings.count > 0)
+    expect(listings).to be(nil)
   end
 
 
-  it "Can parse all of the listings on the page" do
+  it "Can parse and save all of the listings on the page" do
     @spider.parse
     listings = Listing.all
-    #pp listings
-    #puts listings.count
+    expect(listings.count > 0)
   end
 
   it "Knows how many pages of real estate listings there are " do
@@ -53,24 +48,16 @@ describe RealEstateSpider do
       #pp listings
       sleep(interval)
     end
-    pp "All listings"
-    listings = Listing.all
-    pp listings
+    #pp "All listings"
+    #listings = Listing.all
+    #pp listings
     listings = Listing.find_by(neighborhood: "Cobble Hill")
+    expect(listings.count > 0)
     pp "Cobble Hill"
     pp listings
   end
 
-  it "Can retrieve existing records after parse" do
-    listings = Listing.all
-    puts 'All listings after parse'
-    pp listings
-    expect(listings.count > 0)
-    listings = Listing.find_by(neighborhood: "Cobble Hill")
-    puts 'Cobble Hill'
-    pp listings
-    expect(listings.count > 0)
-  end
+
 
 
 end

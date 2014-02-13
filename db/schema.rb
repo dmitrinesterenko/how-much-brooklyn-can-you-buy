@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140209205514) do
+ActiveRecord::Schema.define(version: 20140213012026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
 
   create_table "listings", force: true do |t|
     t.integer  "realty_id",    limit: 8
@@ -34,6 +35,7 @@ ActiveRecord::Schema.define(version: 20140209205514) do
     t.datetime "updated_at"
     t.integer  "sqft"
     t.text     "description"
+    t.uuid     "public_id",              default: "uuid_generate_v4()"
   end
 
 end

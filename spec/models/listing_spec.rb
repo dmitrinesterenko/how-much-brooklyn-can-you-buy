@@ -22,16 +22,20 @@ describe Listing do
 
   it "Can retrieve neighborhoods"  do
     nabes = Listing.neighborhoods
-    #pp nabes
     expect(nabes.count > 1)
-    pp nabes
     expect(nabes.first.locality != nil)
     expect(nabes.first.neighborhood != nil)
   end
 
-  it "No null neighbordhoods"  do
+  it "Does not return null neighbordhoods"  do
     nabes = Listing.neighborhoods.find_by(neighborhood: nil)
     expect(nabes).to eq(nil)
+  end
+
+  it "Can retrieve neighborhoods by a locality (borough)" do
+    nabes = Listing.neighborhoods_by_locality 'Brooklyn'
+    expect(nabes.count > 1)
+    expect(nabes.first.locality).to eq('Brooklyn')
   end
 
 

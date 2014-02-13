@@ -9,7 +9,9 @@ describe Listing do
     listing.beds = "1"
     listing.price = 480000
     listing.realty_id = "1233232"
+    listing.locality = "Brooklyn"
     listing.save
+
 
     listings = Listing.where(realty_id: "1233232").take
     pp listings
@@ -22,6 +24,9 @@ describe Listing do
     nabes = Listing.neighborhoods
     #pp nabes
     expect(nabes.count > 1)
+    pp nabes
+    expect(nabes.first.locality != nil)
+    expect(nabes.first.neighborhood != nil)
   end
 
   it "No null neighbordhoods"  do

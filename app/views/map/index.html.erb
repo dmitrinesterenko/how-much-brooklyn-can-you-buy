@@ -4,7 +4,7 @@
     <select id="nabes">
       <% Listing.neighborhoods.each do |nabe| %>
             <% if nabe.neighborhood != nil %>
-                <option value="<%=nabe.neighborhood%>" id="<%=nabe.neighborhood%>"><%=nabe.neighborhood%></option>
+                <option value="<%=nabe.neighborhood%>" id="<%=nabe.neighborhood%>"><%=nabe.locality%> - <%=nabe.neighborhood%></option>
             <% end %>
       <% end %>
     </select>

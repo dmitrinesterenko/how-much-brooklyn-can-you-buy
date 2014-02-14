@@ -1,8 +1,16 @@
 require 'spec_helper'
 
 describe Listing do
+  let(:neighborhood)    do
+    "Williamsburg"
+  end
+  let(:locality) do
+    "Brooklyn"
+  end
 
-  it "Can create and save a listing"  do
+  let(:price)  { 1000000 }
+
+  it "can create and save a listing"  do
     listing = Listing.new
     listing.address = "16 Monitor st, Brooklyn NY"
     listing.baths = "1.5"
@@ -14,28 +22,43 @@ describe Listing do
 
 
     listings = Listing.where(realty_id: "1233232").take
-    pp listings
     expect(listings != nil)
 
 
   end
 
-  it "Can retrieve neighborhoods"  do
+  it "can retrieve neighborhoods"  do
     nabes = Listing.neighborhoods
     expect(nabes.count > 1)
     expect(nabes.first.locality != nil)
     expect(nabes.first.neighborhood != nil)
   end
 
-  it "Does not return null neighbordhoods"  do
+  it "does not return null neighbordhoods"  do
     nabes = Listing.neighborhoods.find_by(neighborhood: nil)
     expect(nabes).to eq(nil)
   end
 
-  it "Can retrieve neighborhoods by a locality (borough)" do
-    nabes = Listing.neighborhoods_by_locality 'Brooklyn'
+  it "can retrieve neighborhoods by a locality (borough)" do
+    nabes = Listing.neighborhoods_by_locality locality
     expect(nabes.count > 1)
-    expect(nabes.first.locality).to eq('Brooklyn')
+    expect(nabes.first.locality).to eq(locality)
+  end
+
+  it "can retrieve listings by neighborhood" do
+    listings = Listing.listings_by_neighborhood neighborhood
+    expect(listings)
+    expect(listings.count > 0)
+    expect(listings[0].price > 0)
+
+  end
+
+  it "can retrieve listings to buy up to a price" do
+      listings = Listing.find_for_price price, neighborhood
+      pp listings
+      expect(listings)
+      expect(listings.count> 0)
+      expect(listings[0].price > 0)
   end
 
 

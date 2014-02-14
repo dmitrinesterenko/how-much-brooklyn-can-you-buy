@@ -10,24 +10,7 @@ class ApiController < ActionController::API
   def ihave
     money = params[:money].to_i
     nabe = params[:nabes]
-
-    if nabe != nil && nabe != ''
-      listings = Listing.find_by(neighborhood: nabe)
-    else
-      listings = Listing.take(100)
-    end
-    #render :json => listings
-    #return
-    total_price = 0
-    listing_results = Array.new
-    listings.each do |listing|
-      total_price = total_price + listing.price
-
-      if total_price >= money
-        break
-      end
-      listing_results << listing
-    end
+    listing_results = Listing.find_for_price money, nabe
     render :json => listing_results
 
   end

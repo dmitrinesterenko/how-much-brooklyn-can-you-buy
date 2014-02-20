@@ -13,11 +13,14 @@ class Listing < ActiveRecord::Base
   def self.listings_by_neighborhood  neighborhood
     #always return an array even if one is matched for consistency
     listings = Array.new
+    pp 'neighborhood'
+    pp neighborhood
     if neighborhood && neighborhood != ''
       listings = Listing.find_by(neighborhood: neighborhood)
     else
        listings =Listing.take(100)
     end
+    pp listings
     if !defined? listings.count
       [listings]
     else
@@ -41,4 +44,27 @@ class Listing < ActiveRecord::Base
     end
     listing_results
   end
+
+  def self.total neighborhood
+    listings = listings_by_neighborhood neighborhood
+    pp "In total"
+    pp listings
+    total = 0
+    count = 0
+    listings.each do |listing|
+      total = total + listing.price
+      count = count + 1
+    end
+    [total, count]
+  end
+
+
+
+
+  def self.average neighborhood
+    total, count = total neighborhood
+    total.to_i.to_f / count.to_f
+  end
+
+
 end

@@ -61,5 +61,18 @@ describe Listing do
       expect(listings[0].price > 0)
   end
 
+  it "can find the total price for a neighborhood" do
+    listing_total = Listing.total neighborhood
+    expect(listing_total.count > 0)
+    pp listing_total
+
+  end
+
+  it "can find the average price for a neighborhood" do
+    average = Listing.average neighborhood
+    expect(average > 0)
+    pp average
+  end
+
 
 end

@@ -6,8 +6,9 @@ $(function() {
     $('#submit').on('click', function(){
         console.log('clicked');
         var amount = $('#amount').val();
-        console.log(amount);
-        var url = "/api/ihave/" + amount;
+        var neighborhood = $('#neighborhood').val();
+        console.log(amount, neighborhood);
+        var url = "/api/spend/" + amount+"/"+neighborhood;
         var jqxhr = $.get( url, function(data) {
             console.log( "success", data );
             place_marker(data)

@@ -1,7 +1,7 @@
 HowmuchbrooklyncanyoubuyRails::Application.routes.draw do
   root 'map#index'
   #resources :api
-  get 'api/ihave/:money' => 'api#ihave', as: 'money'
+  get 'api/spend/:money/:neighborhood' => 'api#spend', as: 'money', as: 'neighborhood'
   get 'api/neighborhoods/' => 'api#neighborhoods'
 
   #get '/' => 'map'

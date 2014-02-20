@@ -42,7 +42,7 @@ RSpec.configure do |config|
   config.tty = true
 
   # Use the specified formatter
-  config.formatter = :progress #:documentation # :progress, :html, :textmate
+  config.formatter = :documentation # :progress, :html, :textmate
 
   # Run specs in random order to surface order dependencies. If you find an
   # order dependency and want to debug it, you can fix the order by providing

@@ -1,4 +1,6 @@
 #http://www.trulia.com/CA/Los_Angeles,7209,Silver_Lake/
+#this is sample code that uses the RealEstateSpider (it's in the /lib folder)
+#this should be a part of a job
 require_relative '../../config/environment'
 @spider = RealEstateSpider.new.tap do |r|
   #r.page = '/CA/Los_Angeles,7209,Silver_Lake/'

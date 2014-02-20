@@ -1,14 +1,14 @@
 <div class="top">
     <h1 id="tagline">How Much Brooklyn Can You Buy/?</h1>
 
-    <select id="nabes">
+    <select id="nabes" name="neighborhood">
       <% Listing.neighborhoods.each do |nabe| %>
-            <% if nabe.neighborhood != nil %>
+
                 <option value="<%=nabe.neighborhood%>" id="<%=nabe.neighborhood%>"><%=nabe.locality%> - <%=nabe.neighborhood%></option>
-            <% end %>
+
       <% end %>
     </select>
-    <input type="text" id="amount" value="1000000"/> <input type="button" id="submit" value="go"/>
+    <input type="text" name="amount" value="2000000"/> <input type="button" id="submit" value="go"/>
 </div>
 
 <div id="map-canvas"/>

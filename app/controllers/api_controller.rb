@@ -9,7 +9,7 @@ class ApiController < ActionController::API
 
   def ihave
     money = params[:money].to_i
-    nabe = params[:nabes]
+    nabe = params[:neighborhood]
     listing_results = Listing.find_for_price money, nabe
     render :json => listing_results
 

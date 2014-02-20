@@ -37,14 +37,57 @@ function place_marker(data){
     };
     var map = new google.maps.Map(document.getElementById("map-canvas"),
         mapOptions);
-    //end of testing
+
     for(i=0; i< data.length; i++){
         var myLatlng = new google.maps.LatLng(data[i].latitude,data[i].longitude);
+        var infowindow = new google.maps.InfoWindow({
+            content: get_info_window_text(data[i])
+        });
 
         var marker = new google.maps.Marker({
             position: myLatlng,
             map: map,
             title: data[i].description
         });
+        // adding listeners in an array
+        //using closure because am dumb stolen from here http://stackoverflow.com/questions/11106671/google-maps-api-multiple-markers-with-infowindows
+        google.maps.event.addListener(marker, 'click', (function(marker,content,infowindow){
+            return function() {
+                infowindow.setContent(content);
+                infowindow.open(map,marker);
+            };
+        })(marker,content,infowindow));
     }
+}
+
+function get_info_window_text(property){
+    content = "<h1>"+ property.address +" | " + property.price + "</h1>";
+
+    show_details = false;
+    if(property.baths != null || property.beds != null || property.sqft != null){
+        show_details = true;
+
+    }
+    if(show_details){
+        content += "<div class='details'>";
+    }
+    if(property.beds != null){
+        content += "<p>Bedrooms: " + property.baths + "</p>";
+    }
+    if(property.baths != null){
+        content += "<p>Baths: " + property.beds +"</p>";
+    }
+
+    if(property.sqft != null){
+        content += "<p>Sq Feet: " + property.sqft + "</p>";
+    }
+
+    if(show_details){
+        content += "</div>";
+    }
+    content += "<div class='content'>" + property.description +"</div>" ;
+
+
+
+    return content;
 }

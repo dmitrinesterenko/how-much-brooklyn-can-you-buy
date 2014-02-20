@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf473b92-aee1-48f4-93a8-c1dce46f5577" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/listing.rb" afterPath="$PROJECT_DIR$/app/models/listing.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/map.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/map.js" />
     </list>
     <ignored path="how-much-brooklyn-can-you-buy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,7 +19,7 @@
     <file path="/index.html.erb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392867469369" ignored="false" />
     <file path="/real_spider.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392866677038" ignored="false" />
     <file path="/reporter.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392600238432" ignored="false" />
-    <file path="/map.js" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392867402629" ignored="false" />
+    <file path="/map.js" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392869152514" ignored="false" />
     <file path="/routes.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392867909786" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listing.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="listing.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/listing.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="30" selection-start="590" selection-end="590" vertical-scroll-proportion="0.28169015">
+            <state line="21" column="15" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,10 +123,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="map.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="29" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
+            <state line="49" column="43" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.52300245">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -163,10 +163,10 @@
         <option value="$PROJECT_DIR$/app/helpers/real_spider.rb" />
         <option value="$PROJECT_DIR$/app/views/map/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/api_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/map.js" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/app/models/listing.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/map.js" />
       </list>
     </option>
   </component>
@@ -1004,15 +1004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/map/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="29" selection-start="149" selection-end="161" vertical-scroll-proportion="-1.875">
@@ -1043,8 +1034,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/listing.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="30" selection-start="590" selection-end="590" vertical-scroll-proportion="0.28169015">
+        <state line="21" column="15" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="43" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.52300245">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf473b92-aee1-48f4-93a8-c1dce46f5577" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/map/index.html.erb" afterPath="$PROJECT_DIR$/app/views/map/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/map.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/listing.rb" afterPath="$PROJECT_DIR$/app/models/listing.rb" />
     </list>
     <ignored path="how-much-brooklyn-can-you-buy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,7 +15,7 @@
     <file path="/api_controller.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392867810980" ignored="false" />
     <file path="/listing_spec.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392599512099" ignored="false" />
     <file path="/spec_helper.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392338634976" ignored="false" />
-    <file path="/listing.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392600545683" ignored="false" />
+    <file path="/listing.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392868436837" ignored="false" />
     <file path="/index.html.erb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392867469369" ignored="false" />
     <file path="/real_spider.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392866677038" ignored="false" />
     <file path="/reporter.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392600238432" ignored="false" />
@@ -45,15 +40,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="real_estate_index_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/real_estate_index_spec.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="30" selection-start="93" selection-end="109" vertical-scroll-proportion="-1.8">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="real_estate_spider.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/real_estate_spider.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -81,10 +67,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spec_helper.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="spec_helper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="21" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.471831">
+            <state line="44" column="21" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listing.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/listing.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="30" selection-start="590" selection-end="590" vertical-scroll-proportion="0.28169015">
               <folding />
             </state>
           </provider>
@@ -164,7 +159,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/spec/models/listing_spec.rb" />
         <option value="$PROJECT_DIR$/app/helpers/reporter.rb" />
-        <option value="$PROJECT_DIR$/app/models/listing.rb" />
         <option value="$PROJECT_DIR$/spec/real_estate_index_spec.rb" />
         <option value="$PROJECT_DIR$/app/helpers/real_spider.rb" />
         <option value="$PROJECT_DIR$/app/views/map/index.html.erb" />
@@ -172,6 +166,7 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/map.js" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
+        <option value="$PROJECT_DIR$/app/models/listing.rb" />
       </list>
     </option>
   </component>
@@ -855,14 +850,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="22" width="1420" height="808" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2532751" sideWeight="0.6708861" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2532751" sideWeight="0.6708861" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -972,13 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/listing.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="19" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/real_estate_index_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="30" selection-start="93" selection-end="109" vertical-scroll-proportion="-1.8">
@@ -1048,7 +1036,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="21" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.471831">
+        <state line="44" column="21" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/listing.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="30" selection-start="590" selection-end="590" vertical-scroll-proportion="0.28169015">
           <folding />
         </state>
       </provider>

@@ -16,7 +16,7 @@ class Listing < ActiveRecord::Base
     pp 'neighborhood'
     pp neighborhood
     if neighborhood && neighborhood != ''
-      listings = Listing.find_by(neighborhood: neighborhood)
+      listings = Listing.where(neighborhood: neighborhood)
     else
        listings =Listing.take(100)
     end
@@ -37,10 +37,9 @@ class Listing < ActiveRecord::Base
     listings.each do |listing|
       price_found = price_found + listing.price
       listing_results << listing
-      if total_price >= total_price
+      if price_found >= total_price
         break
       end
-
     end
     listing_results
   end

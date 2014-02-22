@@ -86,13 +86,16 @@ describe Listing do
     pp average
   end
 
-  it "can search for a neighborhood or locality by string" do
+  it "can search for a neighborhood or locality by string in the beginning of the neighborhood of borough" do
      nabe_name_1 = 'Broo'
      neighborhood = Listing.autocomplete nabe_name_1
      #shitty test, please fix to just be greater than 0
      neighborhood.length.should > 0
 
-
+    #check for capitals, without capitals letters should return same as with capitalization
+     nabe_name_2= 'broo'
+     neighborhoods_2 = Listing.autocomplete nabe_name_2
+     expect(neighborhoods_2.length).to eq(neighborhood.length)
      #nabe_name_2 = 'Silv'
      #neighborhoods = Listing.autocomplete nabe_name_2
      #expect(neighborhoods.count > 0)

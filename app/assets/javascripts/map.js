@@ -9,7 +9,7 @@ $(function() {
         var neighborhood = $('#neighborhood').val();
         console.log(amount, neighborhood);
         var url = "/api/spend/" + amount+"/"+neighborhood;
-        var jqxhr = $.get( url, function(data) {
+        var request = $.get( url, function(data) {
             console.log( "success", data );
             place_marker(data)
         }).done(function(data) {
@@ -19,15 +19,53 @@ $(function() {
             .fail(function() {
                 console.log( "error" );
             })
-            /*.always(function() {
-                console.log( "complete" );
-            }); */
+
 
 
 
     });
+
+    $('#neighborhood').on('keypress', function(){
+        //find_place($('#neighborhood').val());
+    }) ;
+
+
+
+
+    $('#neighborhood').autocomplete({
+        source:function(request, response){ find_place(request, response);},
+        open: function(){
+            setTimeout(function () {
+                $('.ui-autocomplete').css('z-index', 99999999999999);
+            }, 0);
+        }
+    });
 });
 
+function find_place(request, response){
+    console.log(request);
+    input = request.term;
+    if (input.length < 4) return;
+    console.log(input);
+    url = "/api/autocomplete/?term="  + input;
+    console.log(url);
+    var request = $.get( url, function(data) {
+        console.log( "success", data );
+        source = new Array();
+        for(i=0; i<data.length; i++){
+            //source[i] = data[i].locality + '-' + data[i].neighborhood;
+            //need to be smarter about passing in both the borough or locality and neighborhood and
+            //need to get the API to understand that
+            source[i] =  data[i].neighborhood;
+        }
+        response( source);
+
+        //return source;
+
+    }).fail(function() {
+            console.log( "error" );
+        })
+}
 function place_marker(data){
     //testing
     //just center on first result

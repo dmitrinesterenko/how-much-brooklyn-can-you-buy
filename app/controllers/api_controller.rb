@@ -23,7 +23,7 @@ class ApiController < ActionController::API
   end
 
   def autocomplete
-    input = params[:input]
+    input = params[:term]
     areas = Listing.autocomplete input
     #respond_to do |format|
     #  format.json {render :json => areas}

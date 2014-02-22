@@ -68,7 +68,7 @@ class Listing < ActiveRecord::Base
 
   def self.autocomplete input_string
 
-    areas = Listing.where("neighborhood like '%#{input_string}%'").select(:neighborhood, :locality) .uniq(:neighborhood)
+    areas = Listing.where("lower(neighborhood) like '%#{input_string.downcase}%'").select(:neighborhood, :locality) .uniq(:neighborhood)
     #this should merge with locality like %input% as well
     areas
   end

@@ -21,4 +21,14 @@ class ApiController < ActionController::API
     nabes = Listing.neighborhoods
     render :json => nabes
   end
+
+  def autocomplete
+    input = params[:input]
+    areas = Listing.autocomplete input
+    #respond_to do |format|
+    #  format.json {render :json => areas}
+    #  format.xml { render :xml => areas }
+    #end
+    render :json => areas
+  end
 end

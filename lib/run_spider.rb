@@ -1,7 +1,11 @@
 require File.expand_path("../../config/environment", __FILE__)
 nabe = 'Staten_Island'
+page = "/FL/Naples/"
+state = "FL"
+city = "Naples"
 @spider = RealEstateSpider.new.tap do |r|
-  r.page = "/NY/#{nabe}/"
+  r.page = "/for_sale/#{city},#{state}/1_p"
+  #/for_sale/Naples,FL/1_p
 end
 @spider.parse
 #listings = Listing.all
@@ -20,7 +24,7 @@ index = 0
   r = rand(100)+10
   interval = r / 100.0
   puts "Interval #{interval}"
-  url = "/NY/#{nabe}/p_#{i}/"
+  url = "/for_sale/#{city},#{state}/#{i}_p"
   @spider.get_next_page url
   listings = @spider.parse
   #pp listings
@@ -41,3 +45,7 @@ puts "Time to parse #{end_time - start_time}"
 #puts 'Cobble Hill'
 #pp listings
 #
+listings = Listing.all
+average = Listing.average('Naples')
+pp average
+pp  listings.count

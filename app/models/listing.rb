@@ -66,5 +66,12 @@ class Listing < ActiveRecord::Base
     total.to_i.to_f / count.to_f
   end
 
+  def self.autocomplete input_string
+
+    areas = Listing.where("neighborhood like '%#{input_string}%'").select(:neighborhood, :locality) .uniq(:neighborhood)
+    #this should merge with locality like %input% as well
+    areas
+  end
+
 
 end

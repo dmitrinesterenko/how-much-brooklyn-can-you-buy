@@ -3,6 +3,7 @@ HowmuchbrooklyncanyoubuyRails::Application.routes.draw do
   #resources :api
   get 'api/spend/:money/:neighborhood' => 'api#spend', as: 'money', as: 'neighborhood'
   get 'api/neighborhoods/' => 'api#neighborhoods'
+  get 'api/autocomplete/:input' => 'api#autocomplete' , as: 'input'
 
   #get '/' => 'map'
   # The priority is based upon order of creation: first created -> highest priority.

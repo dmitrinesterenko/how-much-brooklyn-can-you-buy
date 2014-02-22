@@ -8,6 +8,8 @@ describe Listing do
     "Brooklyn"
   end
 
+
+
   let(:price)  { 1000000 }
 
   it "can create and save a listing"  do
@@ -82,6 +84,19 @@ describe Listing do
     average = Listing.average neighborhood
     expect(average > 0)
     pp average
+  end
+
+  it "can search for a neighborhood or locality by string" do
+     nabe_name_1 = 'Broo'
+     neighborhood = Listing.autocomplete nabe_name_1
+     #shitty test, please fix to just be greater than 0
+     neighborhood.length.should > 0
+
+
+     #nabe_name_2 = 'Silv'
+     #neighborhoods = Listing.autocomplete nabe_name_2
+     #expect(neighborhoods.count > 0)
+
   end
 
 

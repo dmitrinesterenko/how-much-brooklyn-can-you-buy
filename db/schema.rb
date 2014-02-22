@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140213012026) do
+ActiveRecord::Schema.define(version: 20140222230406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,13 @@ ActiveRecord::Schema.define(version: 20140213012026) do
     t.integer  "sqft"
     t.text     "description"
     t.uuid     "public_id",              default: "uuid_generate_v4()"
+  end
+
+  create_table "searches", force: true do |t|
+    t.string   "area"
+    t.float    "spend"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

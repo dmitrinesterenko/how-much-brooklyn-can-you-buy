@@ -15,7 +15,15 @@ class Listing < ActiveRecord::Base
     listings = Array.new
     pp 'neighborhood'
     pp neighborhood
-    if neighborhood && neighborhood != ''
+    area = neighborhood.split(' - ')
+    if area.length > 1
+      locality = area[0]
+      neighborhood = area[1]
+
+    end
+    if neighborhood && neighborhood != '' && locality && locality != ''
+      listings = Listing.where(neighborhood: neighborhood, locality:locality)
+    elsif neighborhood && neighborhood != ''
       listings = Listing.where(neighborhood: neighborhood)
     else
        listings =Listing.take(100)
@@ -36,7 +44,7 @@ class Listing < ActiveRecord::Base
     listings = listings_by_neighborhood(neighborhood)
     search = Search.new.tap do  |s|
       s.area = neighborhood
-      s.price = total_price
+      s.spend = total_price
     end
     search.save
 

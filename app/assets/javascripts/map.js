@@ -53,10 +53,10 @@ function find_place(request, response){
         console.log( "success", data );
         source = new Array();
         for(i=0; i<data.length; i++){
-            //source[i] = data[i].locality + '-' + data[i].neighborhood;
+            source[i] = data[i].locality + ' - ' + data[i].neighborhood;
             //need to be smarter about passing in both the borough or locality and neighborhood and
             //need to get the API to understand that
-            source[i] =  data[i].neighborhood;
+            //source[i] =  data[i].neighborhood;
         }
         response( source);
 

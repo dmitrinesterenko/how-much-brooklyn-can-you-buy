@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Listing do
   let(:neighborhood)    do
-    "Williamsburg"
+    "Brooklyn - Williamsburg"
   end
   let(:locality) do
     "Brooklyn"
@@ -36,7 +36,7 @@ describe Listing do
     expect(nabes.first.neighborhood != nil)
   end
 
-  it "does not return null neighbordhoods"  do
+  it "does not return null neighborhoods"  do
     nabes = Listing.neighborhoods.find_by(neighborhood: nil)
     expect(nabes).to eq(nil)
   end

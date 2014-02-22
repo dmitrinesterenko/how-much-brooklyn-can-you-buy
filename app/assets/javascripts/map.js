@@ -37,18 +37,19 @@ function place_marker(data){
     };
     var map = new google.maps.Map(document.getElementById("map-canvas"),
         mapOptions);
+    var infowindow = new google.maps.InfoWindow({
 
+    });
     for(i=0; i< data.length; i++){
         var myLatlng = new google.maps.LatLng(data[i].latitude,data[i].longitude);
-        var infowindow = new google.maps.InfoWindow({
-            content: get_info_window_text(data[i])
-        });
+
 
         var marker = new google.maps.Marker({
             position: myLatlng,
             map: map,
             title: data[i].description
         });
+        content =   get_info_window_text(data[i]);
         // adding listeners in an array
         //using closure because am dumb stolen from here http://stackoverflow.com/questions/11106671/google-maps-api-multiple-markers-with-infowindows
         google.maps.event.addListener(marker, 'click', (function(marker,content,infowindow){

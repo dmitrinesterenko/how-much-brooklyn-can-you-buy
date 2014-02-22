@@ -36,10 +36,11 @@ class Listing < ActiveRecord::Base
 
     listings.each do |listing|
       price_found = price_found + listing.price
-      listing_results << listing
       if price_found >= total_price
         break
       end
+      listing_results << listing
+
     end
     listing_results
   end

@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf473b92-aee1-48f4-93a8-c1dce46f5577" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/map.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/map.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/map.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/map.js" />
-    </list>
+    <list default="true" id="cf473b92-aee1-48f4-93a8-c1dce46f5577" name="Default" comment="" />
     <ignored path="how-much-brooklyn-can-you-buy.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1393109327234" ignored="false" />
@@ -26,6 +23,7 @@
     <file path="/run_spider.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1393097247588" ignored="false" />
     <file path="/20140222230406_create_searches.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1393110317839" ignored="false" />
     <file path="/search_spec.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1393110623985" ignored="false" />
+    <file path="$PROJECT_DIR$/db/schema.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1393112314891" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

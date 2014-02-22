@@ -1,12 +1,11 @@
 <div class="top">
     <h1 id="tagline">How Much Brooklyn Can You Buy?</h1>
     <!-- form processing is done in the map.js file -->
-    <form>
-        <div class="input" style="z-index:100;">
-            neighborhood: <input type="text" id="neighborhood" />
-            <input type="text" id="amount" value="2000000"/> <input type="submit" id="submit" value="find"/>
-        </div>
-    </form>
+    <div class="input">
+    <label for="neighborhood">neighborhood</label> <input type="text" id="neighborhood" />
+    <label for="amount">how much?</label><input type="text" id="amount" value="2000000"/> <input type="button" id="submit" value="find"/>
+    </div>
+
 </div>
 
 <div id="map-canvas"/>

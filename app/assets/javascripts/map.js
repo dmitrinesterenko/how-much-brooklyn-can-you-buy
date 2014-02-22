@@ -25,12 +25,6 @@ $(function() {
 
     });
 
-    $('#neighborhood').on('keypress', function(){
-        //find_place($('#neighborhood').val());
-    }) ;
-
-
-
 
     $('#neighborhood').autocomplete({
         source:function(request, response){ find_place(request, response);},
@@ -45,7 +39,7 @@ $(function() {
 function find_place(request, response){
     console.log(request);
     input = request.term;
-    if (input.length < 4) return;
+    if (input.length < 3) return;
     console.log(input);
     url = "/api/autocomplete/?term="  + input;
     console.log(url);

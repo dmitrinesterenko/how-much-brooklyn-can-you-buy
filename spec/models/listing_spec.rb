@@ -61,6 +61,16 @@ describe Listing do
       expect(listings[0].price > 0)
   end
 
+  it "can does not retrieve any listings with 0 price"  do
+    listings = Listing.find_for_price price, neighborhood
+    listings.each do |listing|
+        if listing.price == 0
+          expect 1==2
+        end
+    end
+  end
+
+
   it "can find the total price for a neighborhood" do
     listing_total = Listing.total neighborhood
     expect(listing_total.count > 0)

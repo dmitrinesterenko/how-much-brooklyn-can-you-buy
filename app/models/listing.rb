@@ -30,9 +30,15 @@ class Listing < ActiveRecord::Base
   end
 
   def self.find_for_price total_price, neighborhood = ''
+
     price_found = 0
     listing_results = Array.new
     listings = listings_by_neighborhood(neighborhood)
+    search = Search.new.tap do  |s|
+      s.area = neighborhood
+      s.price = total_price
+    end
+    search.save
 
     listings.each do |listing|
       price_found = price_found + listing.price

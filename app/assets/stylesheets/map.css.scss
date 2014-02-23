@@ -2,12 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  background-color: #C1B0A9;
-  font-family: Sans-serif;
+  background-color: #f3f3f3;
+  font-family: 'Roboto', sans-serif;
 }
  h1#tagline{ font-size:16pt;}
  h1 #locality{font-size:20pt;}
-.top {padding:5px;}
+.top {
+  padding:5px;
+  padding-left:15px;
+  border-bottom-color: #999999;
+  border-bottom-width: thin;
+  border-bottom-style: solid;
+}
 .input input{
   height:25px;
   font-size:12pt;

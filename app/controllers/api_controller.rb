@@ -17,6 +17,10 @@ class ApiController < ActionController::API
 
   end
 
+  def localities
+    localities = Listing.localities
+    render :json => localities
+  end
   def neighborhoods
     nabes = Listing.neighborhoods
     render :json => nabes

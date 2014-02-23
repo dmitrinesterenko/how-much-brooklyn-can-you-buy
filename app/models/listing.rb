@@ -6,6 +6,10 @@ class Listing < ActiveRecord::Base
 
   end
 
+  def self.localities
+    Listing.where.not(locality: nil).select(:locality).uniq.order(:locality)
+  end
+
   def self.neighborhoods_by_locality locality
    neighborhoods.where(locality: locality)
   end

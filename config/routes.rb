@@ -6,6 +6,7 @@ HowmuchbrooklyncanyoubuyRails::Application.routes.draw do
   #autocomplete will get the params as ?term= query string because that's what the Jquery UI autocomplete
   #function will send it, so that's what we will takw
   get 'api/autocomplete/' => 'api#autocomplete' , as: 'input'
+  get 'api/localities' => 'api#localities'
 
   #get '/' => 'map'
   # The priority is based upon order of creation: first created -> highest priority.

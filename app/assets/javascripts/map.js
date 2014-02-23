@@ -3,6 +3,9 @@
 console.log('map');
 
 $(function() {
+    locality_div =  $("#locality");
+    header_cycle_timeout = 2000;
+    console.log('start');
     $('#submit').on('click', function(){
         console.log('clicked');
         var amount = $('#amount').val();
@@ -18,12 +21,26 @@ $(function() {
             })
             .fail(function() {
                 console.log( "error" );
-            })
-
-
-
+            }) ;
 
     });
+
+    var localities = ['Brooklyn'];
+    url = "/api/localities";
+    var localities_request  = $.get( url, function(data) {
+        console.log( "success localities", data );
+        //header_cycle(data);
+    }).done(function(data) {
+            console.log( "second success" );
+            console.log(data)  ;
+            header_cycle(data);
+
+     })
+     .fail(function() {
+            console.log( "error" );
+        });
+
+
 
 
     $('#neighborhood').autocomplete({
@@ -58,6 +75,8 @@ function find_place(request, response){
             console.log( "error" );
         })
 }
+
+
 function place_marker(data){
     //testing
     //just center on first result
@@ -121,4 +140,23 @@ function get_info_window_text(property){
 
 
     return content;
+}
+
+function header_cycle(localities){
+
+
+     timeout = setInterval(function() {
+         rand = Math.floor(Math.random()*localities.length);
+         change_locality(localities[rand]) ;
+     }, header_cycle_timeout);
+
+
+}
+
+function change_locality(locality){
+
+    if(locality != undefined) {
+
+        locality_div.text(locality);
+    }
 }

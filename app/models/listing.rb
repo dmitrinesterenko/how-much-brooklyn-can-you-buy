@@ -7,7 +7,15 @@ class Listing < ActiveRecord::Base
   end
 
   def self.localities
-    Listing.where.not(locality: nil).select(:locality).uniq.order(:locality)
+    localities = Listing.where.not(locality: nil).select(:locality).uniq.order(:locality)
+    localities_filtered = Array.new
+    localities.each do |locality|
+      locality_up_case = locality.locality.upcase
+      if !localities_filtered.include?  locality_up_case
+        localities_filtered << locality_up_case
+      end
+    end
+    localities_filtered
   end
 
   def self.neighborhoods_by_locality locality

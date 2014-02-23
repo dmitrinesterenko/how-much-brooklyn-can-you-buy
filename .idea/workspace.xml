@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf473b92-aee1-48f4-93a8-c1dce46f5577" name="Default" comment="" />
+    <list default="true" id="cf473b92-aee1-48f4-93a8-c1dce46f5577" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/listing.rb" afterPath="$PROJECT_DIR$/app/models/listing.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/listing_spec.rb" afterPath="$PROJECT_DIR$/spec/models/listing_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="how-much-brooklyn-can-you-buy.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1393112398891" ignored="false" />
@@ -11,9 +15,9 @@
     <file path="/database.yml" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392257135465" ignored="false" />
     <file path="/real_estate_index_spec.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392866195067" ignored="false" />
     <file path="/api_controller.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1393115875396" ignored="false" />
-    <file path="/listing_spec.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1393111930960" ignored="false" />
+    <file path="/listing_spec.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1393119192533" ignored="false" />
     <file path="/spec_helper.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392338634976" ignored="false" />
-    <file path="/listing.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1393118435199" ignored="false" />
+    <file path="/listing.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1393119045598" ignored="false" />
     <file path="/index.html.erb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1393109869236" ignored="false" />
     <file path="/real_spider.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392866677038" ignored="false" />
     <file path="/reporter.rb" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1392600238432" ignored="false" />
@@ -109,25 +113,25 @@
       <file leaf-file-name="listing.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/listing.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="29" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+            <state line="70" column="37" selection-start="1967" selection-end="1967" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listing_spec.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="listing_spec.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/models/listing_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="29" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
+            <state line="62" column="29" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.4225352">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="map.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="157" column="17" selection-start="4414" selection-end="4414" vertical-scroll-proportion="5.6658597">
+            <state line="14" column="23" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -160,13 +164,13 @@
         <option value="$PROJECT_DIR$/app/views/map/index.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20140222230406_create_searches.rb" />
         <option value="$PROJECT_DIR$/spec/models/search_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/models/listing_spec.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/map.css.scss" />
         <option value="$PROJECT_DIR$/app/controllers/api_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/models/listing.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/map.js" />
+        <option value="$PROJECT_DIR$/app/models/listing.rb" />
+        <option value="$PROJECT_DIR$/spec/models/listing_spec.rb" />
       </list>
     </option>
   </component>
@@ -890,20 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/search_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="46" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/listing_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="29" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="10" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
@@ -939,16 +929,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/listing.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+        <state line="14" column="23" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/map.js">
+    <entry file="file://$PROJECT_DIR$/spec/models/search_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="17" selection-start="4414" selection-end="4414" vertical-scroll-proportion="5.6658597">
+        <state line="11" column="46" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/listing.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="37" selection-start="1967" selection-end="1967" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/listing_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="29" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.4225352">
           <folding />
         </state>
       </provider>

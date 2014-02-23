@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf473b92-aee1-48f4-93a8-c1dce46f5577" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/listing.rb" afterPath="$PROJECT_DIR$/app/models/listing.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/map.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-    </list>
+    <list default="true" id="cf473b92-aee1-48f4-93a8-c1dce46f5577" name="Default" comment="" />
     <ignored path="how-much-brooklyn-can-you-buy.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="cf473b92-aee1-48f4-93a8-c1dce46f5577" time="1393112398891" ignored="false" />
@@ -131,7 +127,7 @@
       <file leaf-file-name="map.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="34" selection-start="4464" selection-end="4464" vertical-scroll-proportion="0.7094431">
+            <state line="157" column="17" selection-start="4414" selection-end="4414" vertical-scroll-proportion="5.6658597">
               <folding />
             </state>
           </provider>
@@ -952,7 +948,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="34" selection-start="4464" selection-end="4464" vertical-scroll-proportion="0.7094431">
+        <state line="157" column="17" selection-start="4414" selection-end="4414" vertical-scroll-proportion="5.6658597">
           <folding />
         </state>
       </provider>

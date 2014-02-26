@@ -26,9 +26,12 @@
     <orderEntry type="library" scope="PROVIDED" name="atomic (v1.1.14, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.1.4, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.3.5, ruby-2.0.0-p247) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="database_cleaner (v1.2.0, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.5, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.0.2, ruby-2.0.0-p247) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_girl (v4.3.0, ruby-2.0.0-p247) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_girl_rails (v4.3.0, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="httparty (v0.12.0, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.9, ruby-2.0.0-p247) [gem]" level="application" />

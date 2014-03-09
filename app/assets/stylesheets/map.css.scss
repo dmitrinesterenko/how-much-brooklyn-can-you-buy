@@ -5,6 +5,11 @@ body {
   background-color: #f3f3f3;
   font-family: 'Roboto', sans-serif;
 }
+.logo{
+    background-image: url('/assets/logo_3_80.png') repeat: no-repeat; 
+    width:80px;
+    height:80px;
+}
  h1#tagline{ font-size:16pt;}
  h1 #locality{font-size:20pt;}
 .top {

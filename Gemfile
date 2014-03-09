@@ -38,7 +38,17 @@ end
 
 group :test, :development do
   gem "rspec-rails", "~> 2.4"
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
 end
+
+# May want to include these as well for additional feature testing
+# group :test do
+#  gem 'capybara'
+#  gem 'cucumber-rails'
+#  gem 'pry'
+# end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

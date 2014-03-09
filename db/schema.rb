@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140222230406) do
+ActiveRecord::Schema.define(version: 20140226040938) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,23 @@ ActiveRecord::Schema.define(version: 20140222230406) do
     t.text     "description"
     t.uuid     "public_id",              default: "uuid_generate_v4()"
   end
+
+  create_table "localities", force: true do |t|
+    t.string   "name"
+    t.uuid     "locality_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "state"
+  end
+
+  create_table "neighborhoods", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.uuid     "locality_id"
+  end
+
+  add_index "neighborhoods", ["name"], name: "neighborhood_name_index", order: {"name"=>:desc}, using: :btree
 
   create_table "searches", force: true do |t|
     t.string   "area"

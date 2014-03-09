@@ -3,5 +3,10 @@ howmuchbrooklyncanyoubuy_db_dump
 *tmp*
 tmp*
 .idea*
+<<<<<<< HEAD
 *.idea*
 .DS_Store
+=======
+.DS_Store
+*.idea*
+>>>>>>> optimize-location-lookup

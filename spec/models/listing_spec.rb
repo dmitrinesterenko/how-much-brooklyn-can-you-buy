@@ -55,17 +55,23 @@ describe Listing do
 
   end
 
-  it "can retrieve listings to buy up to a price" do
+  it "can retrieve listings to buy up to a price, with sqft, bedrooms and baths" do
       listings = Listing.find_for_price price, neighborhood
-      pp listings
-      expect(listings)
-      expect(listings.count> 0)
-      expect(listings[0].price > 0)
+      real_listings =  listings[0]
+      expect(real_listings)
+      expect(real_listings.count> 0)
+      expect(real_listings[0].price > 0)
+      #sqft
+      expect(listings[1] > 0)
+      #beds
+      expect(listings[2] > 0)
+      #baths
+      expect(listings[3] > 0)
   end
 
   it "can does not retrieve any listings with 0 price"  do
     listings = Listing.find_for_price price, neighborhood
-    listings.each do |listing|
+    listings[0].each do |listing|
         if listing.price == 0
           expect 1==2
         end

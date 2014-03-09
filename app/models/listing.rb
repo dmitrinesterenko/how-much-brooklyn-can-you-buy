@@ -59,16 +59,21 @@ class Listing < ActiveRecord::Base
       s.spend = total_price
     end
     search.save
-
+    sqft = 0
+    beds = 0
+    baths = 0
     listings.each do |listing|
       price_found = price_found + listing.price
       if price_found >= total_price
         break
       end
       listing_results << listing
+      sqft = sqft + listing.sqft.to_i
+      beds = beds + listing.beds.to_f
+      baths = baths + listing.baths.to_f
 
     end
-    listing_results
+    [listing_results, sqft, beds, baths]
   end
 
   def self.total neighborhood

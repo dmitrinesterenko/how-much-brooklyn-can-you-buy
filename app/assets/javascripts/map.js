@@ -14,10 +14,16 @@ $(function() {
         var url = "/api/spend/" + amount+"/"+neighborhood;
         var request = $.get( url, function(data) {
             console.log( "success", data );
-            place_marker(data)
+            place_marker(data[0]) ;
+            show_meta_data({
+                sqft : data[1],
+                beds : data[2],
+                baths: data[3]
+            })
         }).done(function(data) {
                 console.log( "second success" );
-                console.log(data)  ;
+                console.log(data[0])  ;
+                console.log('sqft', data[1], 'beds', data[2], 'baths', data[3]);
             })
             .fail(function() {
                 console.log( "error" );
@@ -141,6 +147,14 @@ function get_info_window_text(property){
 
     return content;
 }
+
+function show_meta_data(meta){
+    console.log('meta data')    ;
+    $('#sqft').text("SQFT: " + meta.sqft);
+    $('#beds').text("BEDS: " + meta.beds);
+    $('#baths').text("BATHS: " + meta.baths);
+}
+//Header stuff
 
 function header_cycle(localities){
 

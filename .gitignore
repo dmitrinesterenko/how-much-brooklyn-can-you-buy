@@ -3,4 +3,5 @@ howmuchbrooklyncanyoubuy_db_dump
 *tmp*
 tmp*
 .idea*
+*.idea*
 .DS_Store

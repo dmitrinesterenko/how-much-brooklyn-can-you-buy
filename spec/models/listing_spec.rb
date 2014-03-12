@@ -93,6 +93,9 @@ describe Listing do
   end
 
   it "can search for a neighborhood or locality by string in the beginning of the neighborhood of borough" do
+     listing = Listing.new
+     listing.neighborhood = 'Brooklyn'
+     listing.save
      nabe_name_1 = 'Broo'
      neighborhood = Listing.autocomplete nabe_name_1
      #shitty test, please fix to just be greater than 0

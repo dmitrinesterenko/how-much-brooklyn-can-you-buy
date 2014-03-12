@@ -20,3 +20,8 @@ psql postgres
 #  WITH ENCODING='UTF8'
 #       OWNER=howmuchbrooklyncanyoubuy
 #       CONNECTION LIMIT=-1;
+
+#http://stackoverflow.com/questions/4269922/permission-denied-publickey-when-deploying-heroku-code-fatal-the-remote-end
+ # git remote add heroku git@heroku.com:howmuchbrooklyncanyoubuy.git
+ #  heroku keys:add
+ # git push heroku master

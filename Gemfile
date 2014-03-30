@@ -40,6 +40,8 @@ group :test, :development do
   gem "rspec-rails", "~> 2.4"
   gem 'database_cleaner'
   gem 'factory_girl_rails'
+  # track model changes
+  gem 'paper_trail', '~> 3.0.1'
 end
 
 # May want to include these as well for additional feature testing

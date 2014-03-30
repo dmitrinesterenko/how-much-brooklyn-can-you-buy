@@ -1,4 +1,7 @@
 class Listing < ActiveRecord::Base
+
+  has_paper_trail
+
   #TODO this needs to be cached
   def self.neighborhoods
     #how many queries get run against db

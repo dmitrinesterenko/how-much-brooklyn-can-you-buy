@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
-
+# For our API
+gem 'rails-api'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
@@ -29,7 +30,7 @@ gem 'httparty'
 gem 'nokogiri'
 
 #api
-gem 'rails-api'
+#gem 'rails-api'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -45,11 +46,12 @@ group :test, :development do
 end
 
 # May want to include these as well for additional feature testing
-# group :test do
-#  gem 'capybara'
-#  gem 'cucumber-rails'
-#  gem 'pry'
-# end
+group :test do
+  gem 'capybara'
+  gem 'cucumber-rails', :require => false
+  gem 'pry'
+  gem 'pry-nav'
+ end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
@@ -60,5 +62,3 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]

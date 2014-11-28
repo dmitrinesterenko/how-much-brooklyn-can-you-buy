@@ -50,7 +50,8 @@ RSpec.configure do |config|
   config.infer_base_class_for_anonymous_controllers = false
 
   # Use color in STDOUT
-  config.color_enabled = true
+  config.color = true
+  config.infer_spec_type_from_file_location!
 
   # Use color not only in STDOUT but also in pagers and files
   config.tty = true

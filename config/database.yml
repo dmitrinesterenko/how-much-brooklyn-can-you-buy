@@ -17,6 +17,7 @@
 development:
   adapter: postgresql
   encoding: unicode
+  host: localhost
   database: howmuchbrooklyncanyoubuy_development
   pool: 5
   username: howmuchbrooklyncanyoubuy
@@ -48,6 +49,7 @@ test:
   encoding: unicode
   database: howmuchbrooklyncanyoubuy_test
   pool: 5
+  host: localhost
   username: howmuchbrooklyncanyoubuy
   password: netPRgk6
 

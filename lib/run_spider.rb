@@ -15,21 +15,21 @@ start_time = Time.new
 index = 0
 @spider.num_pages.times do |i|
 
-  if i==0 || i==1
-    next
-  end
+  next if i==0 || i==1
   #if i > 3
-  #  break
+  # break
   #end
-  r = rand(100)+10
-  interval = r / 100.0
+  interval = (rand(100)+10)/100.0
   puts "Interval #{interval}"
   url = "/for_sale/#{city},#{state}/#{i}_p"
   @spider.get_next_page url
   listings = @spider.parse
+  #listings.each do |listing|
+	  
+  #end
+  binding.pry
   #pp listings
-  index = index + 1
-  puts index
+  puts i
   sleep(interval)
 end
 end_time = Time.new
@@ -46,6 +46,6 @@ puts "Time to parse #{end_time - start_time}"
 #pp listings
 #
 listings = Listing.all
-average = Listing.average('Naples')
+average = Listing.average(city)
 pp average
 pp  listings.count

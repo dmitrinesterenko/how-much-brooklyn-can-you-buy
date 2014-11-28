@@ -2,17 +2,18 @@ require 'spec_helper'
 
 describe Listing do
   let(:neighborhood)    do
-    "Brooklyn - Williamsburg"
+    "Williamsburg"
   end
   let(:locality) do
     "Brooklyn"
   end
 
-
-
   let(:price)  { 1000000 }
 
-  it "can create and save a listing"  do
+  before(:each) do
+	  create_listing
+  end
+  def create_listing
     listing = Listing.new
     listing.address = "16 Monitor st, Brooklyn NY"
     listing.baths = "1.5"
@@ -20,9 +21,11 @@ describe Listing do
     listing.price = 480000
     listing.realty_id = "1233232"
     listing.locality = "Brooklyn"
+    listing.neighborhood = neighborhood
     listing.save
+  end
 
-
+  it "can create and save a listing"  do
     listings = Listing.where(realty_id: "1233232").take
     expect(listings != nil)
 
@@ -52,6 +55,7 @@ describe Listing do
     expect(listings)
     expect(listings.count > 0)
     expect(listings[0].price > 0)
+
 
   end
 
@@ -98,8 +102,7 @@ describe Listing do
      listing.save
      nabe_name_1 = 'Broo'
      neighborhood = Listing.autocomplete nabe_name_1
-     #shitty test, please fix to just be greater than 0
-     neighborhood.length.should > 0
+     expect(neighborhood.length > 0).to be(true)
 
     #check for capitals, without capitals letters should return same as with capitalization
      nabe_name_2= 'broo'

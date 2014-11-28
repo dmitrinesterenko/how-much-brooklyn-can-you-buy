@@ -6,7 +6,6 @@ class Listing < ActiveRecord::Base
   def self.neighborhoods
     #how many queries get run against db
      Listing.where.not(neighborhood: nil).select(:neighborhood, :locality).uniq.order(:locality)
-
   end
 
   def self.localities

@@ -57,16 +57,8 @@ class RealEstateSpider
     listing_results = Array.new
     listings.each do |listing|
       listing_result = parse_listing listing
-      #begin
-      #pp listing_result
-        result = listing_result.save
-        #pp "result of save #{result}"
-      #rescue
-         #pp listing_result
-      #end
-      #listing_results << listing_result
+      result = listing_result.save
     end
-   # listing_results
   end
 
   def parse_listing  listing
@@ -89,7 +81,7 @@ class RealEstateSpider
     end
     image = listing.css('.mediaImg img')[0]
     if image != nil
-      listing_model.thumb  = image.attributes["data-lazy-src"].value
+      listing_model.thumb  = image.attributes["src"].value
       #don't like depending on images to get the address but it's the easiest to get the full address (missing zip that i am getting later)
       #listing_model["address"] = listing.css('img')[0].attributes["alt"].value
       listing_model.address = image.attributes["alt"].value
@@ -115,13 +107,10 @@ class RealEstateSpider
       listing_model.price = price_i
     end
     #pick up some properties like nabe if they are present
-
+    listing_model.neighborhood =  listing.css('.typeTruncate strong').children[1].text
     listing.css('strong').each do |property|
       if property.children[0] == nil
         next
-      end
-      if property.children[0].text == "Neighborhood"
-        listing_model.neighborhood = property.parent.text.gsub("Neighborhood", "").strip
       end
       if property.children[0].text == "Listing Type"
         listing_model.listing_type = property.parent.text.gsub("Listing Type", "").strip

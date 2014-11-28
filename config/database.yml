@@ -52,6 +52,15 @@ test:
   host: localhost
   username: howmuchbrooklyncanyoubuy
   password: netPRgk6
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: howmuchbrooklyncanyoubuy_development
+  pool: 5
+  host: localhost
+  username: howmuchbrooklyncanyoubuy
+  password: netPRgk6
+
 
 production:
   adapter: postgresql

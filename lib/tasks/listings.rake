@@ -1,6 +1,7 @@
 namespace :listings do
 	desc "Populate listings"
 	task :populate => :environment do
+                Listing.delete_all
 		nabe = 'Staten_Island'
 		page = "/FL/Naples/"
 		state = "FL"
